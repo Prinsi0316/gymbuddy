@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription - Gym Buddy</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(to right, #2980b9, #6dd5fa);
+            color: #ffffff;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .subscription-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .plan {
+             background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 60px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .plan h2 {
+            color: #2980b9;
+        }
+        .plan p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .price {
+            font-size: 2em;
+            color: #e67e22;
+        }
+        .button {
+            background-color: #2980b9;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .try-free {
+            position: absolute; bottom: 0;
+            background-color: #27ae60;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 200px;
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Choose Your Subscription</h1>
+    <div class="subscription-container">
+        <div class="plan">
+            <h2>Basic Plan</h2>
+            <p>Access to gym facilities</p>
+            <p>Group classes included</p>
+            <p class="price">$30/month</p>
+            <a href="{% url 'payments' %}" class="button">Subscribe Now</a>
+        </div>
+        <div class="plan">
+            <h2>Premium Plan</h2>
+            <p>All Basic Plan benefits</p>
+            <p>Personal training sessions</p>
+            <p>Access to exclusive classes</p>
+            <p class="price">$50/month</p>
+            <a href="{% url 'payments' %}" class="button">Subscribe Now</a>
+        </div>
+    </div>
+    <a href="{% url 'payments' %}" class="try-free">Try for Free</a>
+</body>
+</html>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333; /* Same background color as home page */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        .payment-options1 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 70px 0;
+        }
+        .payment-options2 {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 90px 0;
+        }
+        .option {
+            background-color: #e6f7ff;
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .option:hover {
+            transform: scale(1.05);
+        }
+        .option.selected {
+            background-color: #99ddff;
+            border-color: #28a745; /* Green border for selected option */
+        }
+        .confirm-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .confirm-button:hover {
+            background-color: #34495e;
+        }
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 24px;
+            color: #28a745; /* Green for success */
+        }
+    </style>
+</head>
+<body>
+    <h1>Select Payment Method</h1>
+
+    <div class="payment-options1">
+        <div class="option" onclick="selectPayment('Credit Card')">
+            <h2>Credit Card</h2>
+            <p>Visa, MasterCard, American Express</p>
+        </div>
+        <div class="option" onclick="selectPayment('Debit Card')">
+            <h2>Debit Card</h2>
+            <p>All major bank debit cards</p>
+        </div>
+        <br>
+        <div class="option" onclick="selectPayment('PayPal')">
+            <h2>PayPal</h2>
+            <p>Secure online payments</p>
+        </div>
+    </div>
+     <div class="payment-options2">
+        <div class="option" onclick="selectPayment('Net Banking')">
+            <h2>Net Banking</h2>
+            <p>Transfer directly from your bank</p>
+        </div>
+        <div class="option" onclick="selectPayment('UPI')">
+            <h2>UPI</h2>
+            <p>Unified Payments Interface</p>
+        </div>
+        <div class="option" onclick="selectPayment('Cash on Delivery')">
+            <h2>Cash on Delivery</h2>
+            <p>Pay when the service is delivered</p>
+        </div>
+    </div>
+
+    <button class="confirm-button" id="confirmButton" onclick="confirmPayment()">Confirm Payment</button>
+
+    <div class="success-message" id="successMessage">✔ Payment Successful!</div>
+
+    <script>
+        let selectedPayment = '';
+
+        function selectPayment(method) {
+            selectedPayment = method;
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+        }
+
+        function confirmPayment() {
+            if (selectedPayment) {
+                // Simulate payment processing here
+                document.getElementById('successMessage').style.display = 'block';
+                document.getElementById('confirmButton').disabled = true;
+
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = "{% url 'countries' %}"; // Replace with the correct URL for the country page
+                }, 2000);
+            } else {
+                alert('Please select a payment method.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+

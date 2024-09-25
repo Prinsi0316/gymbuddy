@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries - Gym Buddy</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);  /* Same as your home page */
+            color: #34495e;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            background-color: #e74c3c;  /* Header color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .country-list1 {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+        }
+        .country-list2 {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+        }
+        .country-list3 {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+        }
+        .country-list4 {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+        }
+        .country-list5 {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+        }
+        .country {
+            width: 180px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #ecf0f1;  /* Box color */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 10px;  /* Space between boxes */
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;  /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a Country</h1>
+    <div class="country-list1">
+        <div class="country">
+            <h3><a href="{% url 'states' %}">India</a></h3>
+        </div>
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Canada</a></h3>
+        </div>
+    </div>
+<div class="country-list2">
+        <div class="country">
+            <h3><a href="{% url 'states' %}">America</a></h3>
+        </div>
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Russia</a></h3>
+        </div>
+    </div>
+<div class="country-list3">
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Japan</a></h3>
+        </div>
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Egypt</a></h3>
+        </div>
+    </div>
+<div class="country-list4">
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Thailand</a></h3>
+        </div>
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Ukraine</a></h3>
+        </div>
+    </div>
+<div class="country-list5">
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Korea</a></h3>
+        </div>
+        <div class="country">
+            <h3><a href="{% url 'states' %}">Iraq</a></h3>
+        </div>
+    </div>
+</body>
+</html>

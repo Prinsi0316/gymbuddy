@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>States - Gym Buddy</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #34495e;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            background-color: #e74c3c;  /* Header color */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .state-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;  /* Allows wrapping of boxes */
+            margin: 20px 0;
+        }
+        .state {
+            width: 180px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #ecf0f1;  /* Box color */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 10px;  /* Space between boxes */
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;  /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Select a State</h1>
+    <div class="state-list">
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Maharashtra</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Karnataka</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Tamil Nadu</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Gujarat</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Rajasthan</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">West Bengal</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Punjab</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Uttar Pradesh</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Haryana</a></h3>
+        </div>
+        <div class="state">
+            <h3><a href="{% url 'cities' %}">Delhi</a></h3>
+        </div>
+    </div>
+</body>
+</html>

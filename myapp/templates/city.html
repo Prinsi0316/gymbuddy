@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cities</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Example background color like home */
+            font-family: Arial, sans-serif;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .state-section {
+            margin: 20px;
+            padding: 15px;
+            background-color: #e6f7ff;
+            border-radius: 10px;
+            display: none; /* Initially hidden */
+        }
+        .city-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .city-item {
+            padding: 8px;
+            background-color: #cceeff;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .city-item:hover {
+            background-color: #99ddff;
+        }
+        .city-item a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .city-item a:hover {
+            color: #007bff;
+        }
+    </style>
+    <script>
+        function showCitiesForState(state) {
+            // Hide all city sections first
+            const citySections = document.querySelectorAll('.state-section');
+            citySections.forEach(section => section.style.display = 'none');
+
+            // Show only the selected state's cities
+            const selectedSection = document.getElementById(state);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>City List</h1>
+
+    <p>Select a state from the previous page to see its cities.</p>
+
+    <!-- Maharashtra Cities -->
+    <div id="Maharashtra" class="state-section">
+        <h2>Maharashtra Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Raigad-Maharashtra/Gyms/nct-11575244" target="_blank">Raigad</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Mumbai/Gyms/nct-10175244" target="_blank">Mumbai</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Pune/Gyms/nct-10175244" target="_blank">Pune</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Nagpur/Gyms/nct-10175244" target="_blank">Nagpur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Nashik/Gyms/nct-10175244" target="_blank">Nashik</a></li>
+        </ul>
+    </div>
+
+    <!-- Karnataka Cities -->
+    <div id="Karnataka" class="state-section">
+        <h2>Karnataka Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Bangalore/Gyms/nct-10275244" target="_blank">Bangalore</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Mysore/Gyms/nct-10275244" target="_blank">Mysore</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Mangalore/Gyms/nct-10275244" target="_blank">Mangalore</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Hubli/Gyms/nct-10275244" target="_blank">Hubli</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Belgaum/Gyms/nct-10275244" target="_blank">Belgaum</a></li>
+        </ul>
+    </div>
+
+    <!-- Gujarat Cities -->
+    <div id="Gujarat" class="state-section">
+        <h2>Gujarat Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Ahmedabad/Gyms/nct-10375244" target="_blank">Ahmedabad</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Surat/Gyms/nct-10375244" target="_blank">Surat</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Vadodara/Gyms/nct-10375244" target="_blank">Vadodara</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Rajkot/Gyms/nct-10375244" target="_blank">Rajkot</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Bhavnagar/Gyms/nct-10375244" target="_blank">Bhavnagar</a></li>
+        </ul>
+    </div>
+
+    <!-- Rajasthan Cities -->
+    <div id="Rajasthan" class="state-section">
+        <h2>Rajasthan Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Jaipur/Gyms/nct-10475244" target="_blank">Jaipur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Jodhpur/Gyms/nct-10475244" target="_blank">Jodhpur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Udaipur/Gyms/nct-10475244" target="_blank">Udaipur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Ajmer/Gyms/nct-10475244" target="_blank">Ajmer</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Bikaner/Gyms/nct-10475244" target="_blank">Bikaner</a></li>
+        </ul>
+    </div>
+
+    <!-- Tamil Nadu Cities -->
+    <div id="Tamil Nadu" class="state-section">
+        <h2>Tamil Nadu Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Chennai/Gyms/nct-10575244" target="_blank">Chennai</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Coimbatore/Gyms/nct-10575244" target="_blank">Coimbatore</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Madurai/Gyms/nct-10575244" target="_blank">Madurai</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Tiruchirappalli/Gyms/nct-10575244" target="_blank">Tiruchirappalli</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Salem/Gyms/nct-10575244" target="_blank">Salem</a></li>
+        </ul>
+    </div>
+
+    <!-- West Bengal Cities -->
+    <div id="West Bengal" class="state-section">
+        <h2>West Bengal Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Kolkata/Gyms/nct-10675244" target="_blank">Kolkata</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Howrah/Gyms/nct-10675244" target="_blank">Howrah</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Asansol/Gyms/nct-10675244" target="_blank">Asansol</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Durgapur/Gyms/nct-10675244" target="_blank">Durgapur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Siliguri/Gyms/nct-10675244" target="_blank">Siliguri</a></li>
+        </ul>
+    </div>
+
+    <!-- Uttar Pradesh Cities -->
+    <div id="Uttar Pradesh" class="state-section">
+        <h2>Uttar Pradesh Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://https://www.justdial.com/Lucknow/Gyms/nct-10775244" target="_blank">Lucknow</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Kanpur/Gyms/nct-10775244" target="_blank">Kanpur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Varanasi/Gyms/nct-10775244" target="_blank">Varanasi</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Agra/Gyms/nct-10775244" target="_blank">Agra</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Noida/Gyms/nct-10775244" target="_blank">Noida</a></li>
+        </ul>
+    </div>
+
+    <!-- Punjab Cities -->
+    <div id="Punjab" class="state-section">
+        <h2>Punjab Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Chandigarh/Gyms/nct-10875244" target="_blank">Chandigarh</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Amritsar/Gyms/nct-10875244" target="_blank">Amritsar</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Ludhiana/Gyms/nct-10875244" target="_blank">Ludhiana</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Patiala/Gyms/nct-10875244" target="_blank">Patiala</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Jalandhar/Gyms/nct-10875244" target="_blank">Jalandhar</a></li>
+        </ul>
+    </div>
+
+    <!-- Bihar Cities -->
+    <div id="Bihar" class="state-section">
+        <h2>Bihar Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Patna/Gyms/nct-10975244" target="_blank">Patna</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Gaya/Gyms/nct-10975244" target="_blank">Gaya</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Muzaffarpur/Gyms/nct-10975244" target="_blank">Muzaffarpur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Bhagalpur/Gyms/nct-10975244" target="_blank">Bhagalpur</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Darbhanga/Gyms/nct-10975244" target="_blank">Darbhanga</a></li>
+        </ul>
+    </div>
+
+    <!-- Haryana Cities -->
+    <div id="Haryana" class="state-section">
+        <h2>Haryana Cities</h2>
+        <ul class="city-list">
+            <li class="city-item"><a href="https://www.justdial.com/Gurugram/Gyms/nct-11075244" target="_blank">Gurugram</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Faridabad/Gyms/nct-11075244" target="_blank">Faridabad</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Panipat/Gyms/nct-11075244" target="_blank">Panipat</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Hisar/Gyms/nct-11075244" target="_blank">Hisar</a></li>
+            <li class="city-item"><a href="https://www.justdial.com/Rohtak/Gyms/nct-11075244" target="_blank">Rohtak</a></li>
+        </ul>
+    </div>
+
+    <!-- Trigger the correct state section based on JavaScript -->
+    <script>
+
+        showCitiesForState('Haryana');
+
+    </script>
+</body>
+</html>
+
+
