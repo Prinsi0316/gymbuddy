@@ -28,11 +28,11 @@ def workout_categories_view(request):
 def workout_exercises_view(request):
     # Assuming you have a WorkoutExercise model to show exercises
     return render(request, 'workout_exercises.html')
-def home_view(request):
+def index_view(request):
     # You can pass any data you want to display on the home page
     cities = City.objects.all()  # Example: list of cities
     subscriptions = Subscription.objects.all()  # Example: list of subscriptions
-    return render(request, 'home.html', {
+    return render(request, 'index.html', {
         'cities': cities,
         'subscriptions': subscriptions,
     })
