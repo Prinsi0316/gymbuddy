@@ -14,8 +14,8 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', home_view, name='home_redirect'),
-    path('home/', home_view, name='home'),
+    path('', index_view, name='index_redirect'),
+    path('index/', index_view, name='index'),
     path('cities/', city_view, name='cities'),
     path('countries/', country_view, name='countries'),
     path('payments/', payment_view, name='payments'),
