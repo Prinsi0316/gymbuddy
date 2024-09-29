@@ -1,7 +1,7 @@
 # main/urls.py
 from django.urls import path
 from .views import (
-    home_view,
+    index_view,
     city_view,
     country_view,
     payment_view,
